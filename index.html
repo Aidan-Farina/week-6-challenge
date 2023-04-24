@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="./assets/css/style.css">
-        <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <title>Weather Dashbaord</title>
     </head>
     <body>
+        <header class="hero is-primary is is-medium">
+            <div class="hero-body">
+            <h1 class="title">Weather Dashboard</h1>
+            </div>
+        </header>
+
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <nav class="panel">
+                        <p class="panel-heading">Search for a City</p>
+                        <div class="panel-block">
+                            <input class="input" type="text" placeholder="Enter a city name">
+                        </div>
+                        <div class="panel-block">
+                            <button class="button is-primary is-fullwidth">Search</button>
+                        </div>
+                        <p class="panel-heading">Search History</p>
+                        <div class="panel-block">
+                            <ul>
+                                <li>City 1</li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+        
+                <div class="column is-half">
+                    <div class="box">
+                        <p class="title">Today's Weather</p>
+                    </div>
+                    <div class="box">
+                        <p class="title">5-Day Forecast</p>
+                    </div>
+                </div>
+            </div>
+        
+
         
         <script src="api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={385132e5c48b1f67a38d0d302e6444b2}"></script>
         <script src="./assets/js/script.js" async defer></script>
