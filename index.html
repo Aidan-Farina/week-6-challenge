@@ -9,46 +9,42 @@
         <title>Weather Dashbaord</title>
     </head>
     <body>
-        <header class="hero is-primary is is-medium">
-            <div class="hero-body">
-            <h1 class="title">Weather Dashboard</h1>
+        <header class="navbar is-primary is">
+            <div class="navbar-brand">
+            <h1 class="navbar-item title has-text-black">Weather Dashboard</h1>
             </div>
         </header>
 
-            <div class="columns">
-                <div class="column is-one-quarter">
-                    <nav class="panel">
-                        <p class="panel-heading">Search for a City</p>
-                        <div class="panel-block">
-                            <input class="input" type="text" placeholder="Enter a city name">
-                        </div>
-                        <div class="panel-block">
-                            <button class="button is-primary is-fullwidth">Search</button>
-                        </div>
-                        <p class="panel-heading">Search History</p>
-                        <div class="panel-block">
-                            <ul>
-                                <li>City 1</li>
-                                
-                                
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-        
-                <div class="column is-half">
-                    <div class="box">
-                        <p class="title">Today's Weather</p>
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <nav class="panel">
+                    <p class="panel-heading">Search for a City</p>
+                    <div class="panel-block">
+                        <input class="input searchBox" type="text" placeholder="Enter a city name">
                     </div>
-                    <div class="box">
-                        <p class="title">5-Day Forecast</p>
+                    <div class="panel-block">
+                        <button class="button is-primary is-fullwidth btn">Search</button>
                     </div>
-                </div>
+                    <p class="panel-heading">Search History</p>
+                    <div class="panel-block column searchHistoryList">
+                        
+                    </div>
+                </nav>
             </div>
         
-
+            <div class="column is-half">
+                <div class="box todayWeather">
+                    <p class="title">Today's Weather</p>
+                </div>
+                <div class="box ">
+                    <p class="title">5-Day Forecast</p>
+                    <div class="FiveDayWeather"></div>
+                </div>
+            </div>
+        </div>
         
-        <script src="api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={385132e5c48b1f67a38d0d302e6444b2}"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="./assets/js/script.js" async defer></script>
         
     </body>
