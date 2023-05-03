@@ -37,7 +37,8 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=impe
 
 function logSearch(cityName) {
 var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-searchHistory.push({ city: cityName});
+var searchItem = { city: cityName, date: new Date()};
+searchHistory.push(searchItem);
 localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 displaySearchHistory();
   }
@@ -47,19 +48,17 @@ function displaySearchHistory() {
     var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
     var searchHistoryList = $('.searchHistoryList');
     searchHistoryList.empty();
-    searchHistory.forEach(function(search) {
-      var searchItem = $('<button>').text(search.city);
+    var uniqueSearchHistory =[...new Set(searchHistory.map(item => item.city))];
+    uniqueSearchHistory.forEach(function(search) {
+      var searchItem = $('<button>').addClass('column is-half button').text(search);
+      searchItem.click(function(){
+        $('.searchBox').val(search);
+        getWeatherData();
+      });
       searchHistoryList.append(searchItem);
     });
   }
 displaySearchHistory();
 
-
-
-//log searched areas to search history
-
-//show todays weather based on location searched
-
-//show the 5 day forecast based on location searched
 
 });
