@@ -4,11 +4,10 @@
 
 This project is a weather dashboard that displays the current days weather as well as the 5 day forecast.
 
-
 ## Deployed Application
 
 https://aidan-farina.github.io/week-6-challenge/
 
 ## image
 
-![week5challenge](https://user-images.githubusercontent.com/127269326/233896401-5a1d6ce2-ea2d-428d-b46a-1d5894f73ca6.png)
+![image](https://user-images.githubusercontent.com/127269326/236116964-20cea63f-c369-4223-845e-1bd10b2b653b.png)
