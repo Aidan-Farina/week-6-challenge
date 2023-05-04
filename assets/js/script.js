@@ -26,7 +26,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=impe
       var dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'long' });
       var temp = weatherData.main.temp.toFixed(0);
       var humidity = weatherData.main.humidity;
-      var iconUrl = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+      var iconUrl = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
       var iconAlt = weatherData.weather[0].description;
       var forecastItem = $("<div>").addClass("column is-one-fifth box");
       forecastItem.append($("<p>").text(dayOfWeek));
@@ -49,7 +49,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imper
       var city = data.name
       var temp = data.main.temp.toFixed(0);
       var humidity = data.main.humidity;
-      var iconUrl = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+      var iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
       var iconAlt = data.weather[0].description;
       var todaysWeatherItem = $("<div>").addClass("box");
       todaysWeatherItem.append($("<p>").text(city));
