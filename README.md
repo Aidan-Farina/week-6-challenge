@@ -8,6 +8,6 @@ This project is a weather dashboard that displays the current days weather as we
 
 https://aidan-farina.github.io/week-6-challenge/
 
-## image
+## Image
 
-![image](https://user-images.githubusercontent.com/127269326/236116964-20cea63f-c369-4223-845e-1bd10b2b653b.png)
+![image](https://user-images.githubusercontent.com/127269326/236117098-72a063b7-0038-43fa-8012-f7fd98c8ed8d.png)
