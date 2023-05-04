@@ -60,7 +60,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imper
     });
     logSearch(cityName)
 };
-
+//this function logs cities typed into the search into the search history local storage
 function logSearch(cityName) {
 var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
 var searchItem = { city: cityName, date: new Date()};
@@ -69,13 +69,15 @@ localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 displaySearchHistory();
   }
 
-
+//this function displays the search history from local storage
 function displaySearchHistory() {
     var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
     var searchHistoryList = $('.searchHistoryList');
     searchHistoryList.empty();
+    //this variable makes sure there are no repeat cities in the search history
     var uniqueSearchHistory =[...new Set(searchHistory.map(item => item.city))];
     uniqueSearchHistory.filter(Boolean).forEach(function(search) {
+      //this variable makes the search history clickable so you can just click and get information about that city
       var searchItem = $('<button>').addClass('column is-half button').text(search);
       searchItem.click(function(){
         $('.searchBox').val(search);
